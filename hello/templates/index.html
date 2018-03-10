@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}変数の練習{% endblock %}
+
+{% block body %}
+
+  <!--内容-->
+  <div>
+    {{ hour }}時です。<br>
+    {{ message }}
+  </div>
+  <br>
+  <div>
+    <a href="{% url 'hello:hello_world' %}">hello_world</a><br>
+    <a href="{% url 'hello:hello_template' %}">変数を表示しよう(template)</a><br>
+    <a href="{% url 'hello:hello_if' %}">条件によって表示を切り替えよう(if)</a><br>
+    <a href="{% url 'hello:hello_for' %}">配列の要素を扱おう(for)</a><br>
+    <a href="{% url 'hello:hello_get_query' %}">ビュー関数で、画面から入力したデータを扱おう</a><br>
+    <a href="{% url 'hello:hello_forms' %}">ビュー関数からFormクラスを使おう_1</a><br>
+    <a href="{% url 'hello:hello_forms2' %}">ビュー関数からFormクラスを使おう_2</a><br>
+  </div>
+  <!--内容〆-->
+
+{% endblock %}
